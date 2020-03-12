@@ -1,7 +1,5 @@
 package com.wuligao.utils.result;
 
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -61,19 +59,16 @@ public class ApiWrapper<T> implements Serializable {
     /**
      * 编号.
      */
-    @ApiModelProperty("业务状态码")
     private int result;
 
     /**
      * 信息.
      */
-    @ApiModelProperty("业务信息")
     private String resultInfo;
 
     /**
      * 结果数据
      */
-    @ApiModelProperty("返回参数")
     private T data;
 
     public ApiWrapper() {
