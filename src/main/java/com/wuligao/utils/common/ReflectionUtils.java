@@ -1,6 +1,5 @@
 package com.wuligao.utils.common;
 
-import io.swagger.annotations.ApiModelProperty;
 import lombok.extern.slf4j.Slf4j;
 
 import java.lang.reflect.Field;

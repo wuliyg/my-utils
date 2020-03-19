@@ -258,7 +258,7 @@ public class RSAUtil {
      * 将密钥分别用Base64编码保存到#publicKey.properties#和#privateKey.properties#文件中
      * 保存的默认名称分别为publicKey和privateKey
      */
-    public static synchronized void generateKeyPair(){
+    private static synchronized void generateKeyPair(){
         try {
             keyPairGenerator.initialize(KEY_SIZE,new SecureRandom(UUID.randomUUID().toString().replaceAll("-","").getBytes()));
             keyPair = keyPairGenerator.generateKeyPair();
@@ -279,9 +279,7 @@ public class RSAUtil {
 
 
     public static void main(String[] args) {
-        String code="558307764711981056";
-        String ocsNum=RSAUtil.encryptByPublic(code.getBytes(), "key");
-        log.info("ocsNum:"+ocsNum);
+        generateKeyPair();
     }
 
 
