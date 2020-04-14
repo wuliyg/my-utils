@@ -25,7 +25,7 @@ public class CodeGenerator {
      * 读取控制台内容
      * </p>
      */
-    public static String scanner(String tip) {
+    private static String scanner(String tip) {
 
         Scanner scanner = new Scanner(System.in);
         StringBuilder help = new StringBuilder();
